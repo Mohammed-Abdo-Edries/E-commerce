@@ -13,10 +13,10 @@ app.use(express.json())
 app.use('/api/user', userRoutes)
 app.use('/product', productRoutes)
 app.use(express.urlencoded({ extended: false }));
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"))
-    res.status(200)
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, "index.html"))
+//     res.status(200)
+// })
 
 mongoose.set("strictQuery", false)
 mongoose.connect(process.env.MONGO_URL)
